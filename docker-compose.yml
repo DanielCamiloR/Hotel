@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3003:3003"  # Mapea el puerto del contenedor al host
+    volumes:
+      - ./backend:/app
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - frontend
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"  # Mapea el puerto del contenedor al host
+    volumes:
+      - ./frontend:/usr/share/nginx/html
