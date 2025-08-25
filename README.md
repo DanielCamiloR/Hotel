@@ -58,7 +58,8 @@ docker-compose up -d
 ```
 
 > ![Nota](https://img.shields.io/badge/Nota-Recomendación-blue)  
-> Para una mejora en el despliegue se puede utilizar 
+> Para una mejora en el despliegue se puede utilizar herramientas de automatizacion de despliego como
+> **GitHub Actions, Terraform, Ansible, etc.** 
 
 ### 1️⃣ Preparación del Proyecto
 **Local**
