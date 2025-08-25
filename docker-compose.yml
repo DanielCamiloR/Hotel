@@ -6,3 +6,5 @@ services:
     build: .
     ports:
       - "3003:3003"
+    volumes:
+      - ./src:/app/src

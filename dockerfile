@@ -4,17 +4,17 @@ FROM node:18
 # Carpeta de trabajo
 WORKDIR /app
 
-# Copiar package.json y lock primero (para cache)
-COPY ./src/package*.json ./
+# Copiar package.json y package-lock.json primero
+COPY package*.json ./
 
 # Instalar dependencias
 RUN npm install
 
-# Copiar el resto del código
-COPY ./src .
+# Copiar todo el proyecto
+COPY . .
 
 # Exponer puerto
 EXPOSE 3003
 
-# Comando por defecto
+# Iniciar app
 CMD ["npm", "start"]
