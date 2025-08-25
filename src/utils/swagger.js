@@ -8,7 +8,7 @@ const swaggerOptions = {
       version: "1.0.0",
       description: "API para configuración de Hotel",
     },
-    servers: [{ url: "http://localhost:3003" }],
+    servers: [{ url: "http://18.222.180.221:3003" }],
 
   },
   apis: ["./src/routes/*.js"]

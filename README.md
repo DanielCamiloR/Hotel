@@ -1,6 +1,3 @@
-# Hotel-Booking
-API para gestionar reservas de habitaciones en un hotel. Permite crear, listar y eliminar reservas de clientes. Implementada con un diseño frontend y documentación con Swagger.
-
 # Despliegue de Aplicación Web en AWS EC2
 
 ## 📌 Descripción del Proyecto
@@ -20,16 +17,20 @@ La aplicación seleccionada es **Hotel-Booking** y está preparada para ejecutar
 ---
 
 ## 🌍 URL de la Aplicación
-http://18.222.180.221:3003/api-docs
+📄 **Swagger UI:** [http://18.222.180.221:3003/api-docs](http://18.222.180.221:3003/api-docs)  
 
 ---
 
 ## 📋 Requisitos Previos
-- tener instalado docker
-- tener una cuenta en mongodb
-- Tener conocimientos sobre swagger Documentacion de apis
-
+- **Docker y Docker Compose** instalados.
+- Cuenta en **MongoDB Atlas** con conexión activa.
+- Conocimientos básicos de:
+  - SSH y uso de claves `.pem` (AWS).
+  - Comandos básicos de Docker.
+  - Documentación de APIs con Swagger.
+  
 ---
+
 
 ## 🚀 Paso a Paso del Despliegue
 1. Loguearse bajo la clave **.pem** de la instancia de aws para conectarnos mediante ssh en una terminal
@@ -87,7 +88,11 @@ npm run start
 ```
 - agregar el archivo .env para configurar la variable de entorno del sistema **MONGO_URI** y su uri corespondiente del clouster de mongo
 
-**Aws**
+## 🛡️ Buenas Prácticas 
 
+- Limitar accesos SSH con IP específica.
+- Mantener actualizados paquetes y dependencias.
+- Usar Nginx como proxy inverso para producción.
+- Configurar variables de entorno seguras.
 
 
