@@ -9,16 +9,7 @@ const swaggerOptions = {
       description: "API para configuración de Hotel",
     },
     servers: [{ url: "http://localhost:3003" }],
-    components: {
-      securitySchemes: {
-        bearerAuth: {
-          type: "http",
-          scheme: "bearer",
-          bearerFormat: "JWT",
-        },
-      },
-    },
-    security: [{ bearerAuth: [] }],
+
   },
   apis: ["./src/routes/*.js"]
 };
