@@ -32,6 +32,11 @@ Este proyecto utiliza **GitHub Actions** para:
 El workflow se encuentra en: `.github/workflows/test_ci.yml`.
 
 ---
+### 🖼️ Capturas de Pantalla
+<img width="1009" height="241" alt="image" src="https://github.com/user-attachments/assets/848d62d1-964a-4ad4-862c-ad6b1486b34a" />
+
+
+---
 
 ## 📋 Requisitos Previos
 - **Docker y Docker Compose** instalados.
