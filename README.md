@@ -1,5 +1,7 @@
 # Despliegue de Aplicación Web en AWS EC2
 
+[![Node.js CI](https://github.com/DanielCamiloR/Hotel/.github/workflows/test_ci.yml/badge.svg)](https://github.com/DanielCamiloR/Hotel/.github/workflows/test_ci.yml)
+
 ## 📌 Descripción del Proyecto
 API para gestionar reservas de habitaciones en un hotel. Permite crear, listar y eliminar reservas de clientes. Implementada con un diseño frontend y documentación con Swagger.
 La aplicación seleccionada es **Hotel-Booking** y está preparada para ejecutarse en un entorno de producción en la nube.
@@ -18,6 +20,16 @@ La aplicación seleccionada es **Hotel-Booking** y está preparada para ejecutar
 
 ## 🌍 URL de la Aplicación
 📄 **Swagger UI:** [http://18.222.180.221:3003/api-docs](http://18.222.180.221:3003/api-docs)  
+
+---
+
+## 🤖 Automatización con GitHub Actions
+Este proyecto utiliza **GitHub Actions** para:
+- Ejecutar tests unitarios con **Jest**.
+- Verificar dependencias y asegurar estabilidad antes de mergear a `main`.
+- Preparar el entorno para despliegue en AWS EC2.
+
+El workflow se encuentra en: `.github/workflows/test_ci.yml`.
 
 ---
 
