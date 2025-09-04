@@ -1,6 +1,6 @@
 # Despliegue de Aplicación Web en AWS EC2
 
-[![Node.js CI](https://github.com/DanielCamiloR/Hotel/.github/workflows/test_ci.yml/badge.svg)](https://github.com/DanielCamiloR/Hotel/.github/workflows/test_ci.yml)
+![CI](https://github.com/DanielCamiloR/Hotel/workflows/test_ci.yml/badge.svg)
 
 ## 📌 Descripción del Proyecto
 API para gestionar reservas de habitaciones en un hotel. Permite crear, listar y eliminar reservas de clientes. Implementada con un diseño frontend y documentación con Swagger.
