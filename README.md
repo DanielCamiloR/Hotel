@@ -50,6 +50,10 @@ El workflow se encuentra en: `.github/workflows/test_ci.yml`.
   
 ---
 
+## 🐳 Containerización con Docker
+- **comando para crear y correr la imagen:** docker-compose up -d --build
+- **puertos:** 3003
+---
 
 ## 🚀 Paso a Paso del Despliegue
 1. Loguearse bajo la clave **.pem** de la instancia de aws para conectarnos mediante ssh en una terminal
