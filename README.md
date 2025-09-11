@@ -2,6 +2,8 @@
 
 [![Node.js Tests](https://github.com/DanielCamiloR/Hotel/actions/workflows/test_ci.yml/badge.svg)](https://github.com/DanielCamiloR/Hotel/actions/workflows/test_ci.yml)
 
+![Docker](https://img.shields.io/badge/Docker-Ready-blue?logo=docker)
+
 ## 📌 Descripción del Proyecto
 API para gestionar reservas de habitaciones en un hotel. Permite crear, listar y eliminar reservas de clientes. Implementada con un diseño frontend y documentación con Swagger.
 La aplicación seleccionada es **Hotel-Booking** y está preparada para ejecutarse en un entorno de producción en la nube.
