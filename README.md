@@ -11,7 +11,7 @@ La aplicación seleccionada es **Hotel-Booking** y está preparada para ejecutar
 ---
 
 ## 🛠️ Tecnologías Utilizadas
-- **Lenguaje:** JavaScript Node.js 
+- **Lenguaje:** JavaScript Node.js
 - **Servidor Web:** No tiene sin embargo se podria gestionar con Nginx
 - **Cloud Provider:** Amazon Web Services (AWS)
 - **Servicio de Infraestructura:** Amazon EC2
