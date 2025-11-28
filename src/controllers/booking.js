@@ -53,10 +53,79 @@ const deleteBooking = async (req, res) => {
     res.status(500).json({ message: "Error deleting booking", error: error.message });
   }
 };
+// Agrega esta función al final del archivo booking.js
+
+/**
+ * Update a booking by ID
+ */
+const updateBooking = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const updateData = req.body;
+
+        // Validar que el ID existe
+        if (!id) {
+            return res.status(400).json({
+                success: false,
+                message: 'ID de reserva es requerido'
+            });
+        }
+
+        // Buscar y actualizar la reserva
+        const updatedBooking = await Booking.findByIdAndUpdate(
+            id,
+            updateData,
+            { 
+                new: true, // Devuelve el documento actualizado
+                runValidators: true // Ejecuta las validaciones del schema
+            }
+        );
+
+        // Verificar si la reserva existe
+        if (!updatedBooking) {
+            return res.status(404).json({
+                success: false,
+                message: 'Reserva no encontrada'
+            });
+        }
+
+        res.status(200).json({
+            success: true,
+            message: 'Reserva actualizada exitosamente',
+            data: updatedBooking
+        });
+
+    } catch (error) {
+        console.error('Error actualizando reserva:', error);
+        
+        if (error.name === 'CastError') {
+            return res.status(400).json({
+                success: false,
+                message: 'ID de reserva no válido'
+            });
+        }
+        
+        if (error.name === 'ValidationError') {
+            return res.status(400).json({
+                success: false,
+                message: 'Datos de validación incorrectos',
+                errors: error.errors
+            });
+        }
+
+        res.status(500).json({
+            success: false,
+            message: 'Error interno del servidor al actualizar reserva'
+        });
+    }
+};
 
 module.exports = {
   createBooking,
   getAllBookings,
   deleteBooking,
-  getIdBooking
+  getIdBooking,
+  updateBooking
 };
+
+

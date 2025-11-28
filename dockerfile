@@ -18,3 +18,8 @@ EXPOSE 3003
 
 # Iniciar app
 CMD ["npm", "start"]
+
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
+EXPOSE 80
+

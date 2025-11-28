@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { createBooking, getAllBookings, getIdBooking, deleteBooking } = require("../controllers/booking");
+const { createBooking, getAllBookings, getIdBooking, deleteBooking, updateBooking} = require("../controllers/booking");
 
 /**
  * @swagger
@@ -94,5 +94,52 @@ router.get("/get-one-booking/:id", getIdBooking);
  *         description: Booking deleted successfully
  */
 router.delete("/delete-booking/:id", deleteBooking);
+/**
+ * @swagger
+ * /api/hotel/update-booking/{id}:
+ *   put:
+ *     summary: Update a booking by ID
+ *     description: Updates an existing room reservation
+ *     tags:
+ *       - Bookings
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         description: The ID of the booking to update
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *               email:
+ *                 type: string
+ *               roomType:
+ *                 type: string
+ *               numberOfRooms:
+ *                 type: integer
+ *               numberOfGuests:
+ *                 type: integer
+ *               arrivalDate:
+ *                 type: string
+ *                 format: date
+ *               departureDate:
+ *                 type: string
+ *                 format: date
+ *     responses:
+ *       200:
+ *         description: Booking updated successfully
+ *       404:
+ *         description: Booking not found
+ *       400:
+ *         description: Invalid input data
+ */
+router.put("/update-booking/:id", updateBooking);
 
 module.exports = router;
