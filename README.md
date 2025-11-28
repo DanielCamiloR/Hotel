@@ -118,4 +118,155 @@ npm run start
 - Usar Nginx como proxy inverso para producción.
 - Configurar variables de entorno seguras.
 
+---
+
+## ✨ Características Implementadas
+Frontend Responsive: Interfaz web moderna con HTML, CSS y JavaScript
+
+Backend API REST: Servidor Node.js + Express + MongoDB
+
+CRUD Completo: Crear, listar, editar y eliminar reservas
+
+Documentación API: Swagger integrado
+
+Interfaz Intuitiva: Formularios validados y tabla interactiva
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+Backend:
+
+Node.js + Express.js
+
+MongoDB + Mongoose
+
+Swagger para documentación
+
+CORS habilitado
+
+Frontend:
+
+HTML5 semántico
+
+CSS3 con diseño responsive
+
+JavaScript vanilla (ES6+)
+
+Fetch API para comunicación
+
+---
+
+## 🚀 Funcionalidades
+Gestión de Reservas
+✅ Crear nuevas reservas
+
+✅ Listar todas las reservas
+
+✅ Editar reservas existentes
+
+✅ Eliminar reservas
+
+✅ Validación de formularios
+
+✅ Mensajes de confirmación
+
+Interfaz de Usuario
+✅ Diseño responsive
+
+✅ Loading states
+
+✅ Mensajes de error/éxito
+
+✅ Confirmación para eliminar
+
+✅ Navegación suave
+
+---
+
+## 📁 Estructura del Proyecto
+text
+Hotel-Booking/
+├── src/
+│   ├── controllers/     # Lógica de negocio
+│   ├── models/          # Esquemas MongoDB
+│   ├── pagina/          # Frontend (HTML, CSS, JS)
+│   ├── routes/          # Rutas API
+│   └── utils/           # Utilidades (Swagger)
+├── test/               # Pruebas
+└── index.js           # Servidor principal
+🔧 Instalación y Uso
+bash
+# Instalar dependencias
+npm install
+
+# Ejecutar en desarrollo
+node index.js
+
+# Acceder a la aplicación
+http://localhost:3003
+
+# Documentación API
+http://localhost:3003/api-docs
+🌐 Endpoints API
+Método	Endpoint	Descripción
+GET	/api/hotel/get-bookings	Obtener todas las reservas
+GET	/api/hotel/get-one-booking/:id	Obtener reserva específica
+POST	/api/hotel/create	Crear nueva reserva
+PUT	/api/hotel/update-booking/:id	Actualizar reserva
+DELETE	/api/hotel/delete-booking/:id	Eliminar reserva
+📊 Modelo de Datos
+javascript
+{
+  name: String,           // Nombre del huésped
+  email: String,          // Correo electrónico
+  roomType: String,       // Tipo de habitación
+  numberOfRooms: Number,  // Número de habitaciones
+  numberOfGuests: Number, // Número de huéspedes
+  arrivalDate: Date,      // Fecha de entrada
+  departureDate: Date,    // Fecha de salida
+  createdAt: Date        // Fecha de creación
+}
+
+---
+## 🎯 Características Técnicas
+Arquitectura: MVC (Modelo-Vista-Controlador)
+
+Base de Datos: MongoDB con Mongoose ODM
+
+API: RESTful con JSON
+
+Frontend: Single Page Application (SPA)
+
+Seguridad: Validación de entrada, escape HTML
+
+CORS: Configurado para desarrollo y producción
+
+
+---
+
+## 🚀 Despliegue
+El sistema está preparado para despliegue en:
+
+Entornos cloud (AWS, Azure, GCP)
+
+Docker containers
+
+Servidores tradicionales
+
+📝 Estado del Proyecto
+✅ COMPLETADO
+
+Backend API funcional
+
+Frontend responsive
+
+CRUD completo
+
+Documentación Swagger
+
+Validaciones y manejo de errores
+
+Interfaz de usuario intuitiva
+
+
 
