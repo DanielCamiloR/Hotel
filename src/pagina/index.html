@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel-Booking — Panel de Reservas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="app-title">Hotel-Booking</h1>
+    <p class="subtitle">Gestión de reservas</p>
+  </header>
+
+  <main class="container">
+    <!-- Mensajes de feedback -->
+    <div id="message" class="message" aria-live="polite" hidden></div>
+
+    <!-- Formulario de creación/edición de reserva -->
+    <section class="card form-card" aria-labelledby="form-title">
+      <h2 id="form-title">Crear / Editar Reserva</h2>
+      <form id="reservation-form">
+        <div class="form-group">
+          <label for="guest-name">Nombre del huésped</label>
+          <input id="guest-name" name="guestName" type="text" required minlength="2" maxlength="80" placeholder="Ingrese nombre completo" />
+        </div>
+
+        <div class="form-group">
+          <label for="room-number">Tipo de habitación</label>
+          <input id="room-number" name="roomNumber" type="text" required placeholder="Ej: Suite, Standard" />
+        </div>
+
+        <div class="form-group">
+          <label for="checkin-date">Fecha de entrada</label>
+          <input id="checkin-date" name="checkinDate" type="date" required />
+        </div>
+
+        <div class="form-group">
+          <label for="checkout-date">Fecha de salida</label>
+          <input id="checkout-date" name="checkoutDate" type="date" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" required placeholder="ejemplo@email.com" />
+        </div>
+
+        <div class="form-actions">
+          <button id="save-btn" type="submit" class="btn primary">Guardar Reserva</button>
+          <button id="reset-btn" type="button" class="btn secondary">Limpiar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Tabla de reservas -->
+    <section class="card table-card" aria-labelledby="list-title">
+      <h2 id="list-title">Reservas</h2>
+
+      <div class="table-actions">
+        <button id="refresh-btn" class="btn">🔄 Actualizar</button>
+        <button id="new-reservation" class="btn">➕ Nueva reserva</button>
+      </div>
+
+      <div class="table-wrapper">
+        <table id="reservations-table" aria-describedby="list-title">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Huésped</th>
+              <th>Tipo Hab.</th>
+              <th>N° Hab.</th>
+              <th>N° Personas</th>
+              <th>Entrada</th>
+              <th>Salida</th>
+              <th>Email</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- filas generadas dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Loading overlay -->
+  <div id="loading" class="loading" hidden>
+    <div class="spinner" role="status" aria-hidden="true"></div>
+    <span class="loading-text">Cargando...</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
