@@ -21,7 +21,7 @@ La aplicación seleccionada es **Hotel-Booking** y está preparada para ejecutar
 ---
 
 ## 🌍 URL de la Aplicación
-📄 **Swagger UI:** [http://18.222.180.221:3003/api-docs](http://18.222.180.221:3003/api-docs)  
+📄 **Swagger UI:** [http://3.139.12.126:3003/api-docs](http://3.139.12.126:3003/api-docs)  
 
 ---
 
