@@ -14,7 +14,7 @@ const PORT = 3003;
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:3003', 'http://18.222.180.221:3003'],
+  origin: ['http://localhost:3003', 'http://3.139.12.126:3003'],
   credentials: true
 }));
 app.use(express.json());

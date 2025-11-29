@@ -3,7 +3,7 @@ console.log('✅ Script cargado - Hotel Booking System');
 // Configuración
 const API_BASE_URL = window.location.hostname === 'localhost' 
   ? "/api/hotel" 
-  : "http://18.222.180.221:3003/api/hotel";
+  : "http://3.139.12.126:3003/api/hotel";
 
 // Elementos del DOM
 const messageBox = document.getElementById("message");
